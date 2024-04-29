@@ -17,6 +17,25 @@ public class swea_2063 {
         for (int i = 0; i < N; i++) {
             arr[i] = sc.nextInt();
         }
+
+        mergesort(arr);
         System.out.println(arr[N/2]);
     }
+
+    private static void mergesort(int[] A) { // 배열을 내림차순으로 정렬
+        int size = A.length;
+        for (int i = 0; i < size; i++) {
+            for (int j = i + 1; j < size; j++) {
+                if (A[i] > A[j]) {
+                    continue;
+                } else if (A[i] < A[j]) {
+                    int temp = 0;
+                    temp = A[i];
+                    A[i] = A[j];
+                    A[j] = temp;
+                }
+            }
+        }
+    }
+
 }
