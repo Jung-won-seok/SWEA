@@ -11,7 +11,7 @@ public class swea_2058 {
         int a = N / 1000;
         int b = (N%1000) / 100;
         int c = (N % 100) / 10;
-        int d = N % 10;
+        int d = N %10;
         System.out.println(a+b+c+d);
     }
 }
