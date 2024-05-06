@@ -23,7 +23,7 @@ public class swea_1244 {
             for (int i = 0; i < numStr.length(); i++) {
                 arr[i] = numStr.charAt(i) - '0'; //9 4
             }
-            if()
+
 
             for (int i = 0; i < switch_cnt; i++) {
                 int max = 0;
