@@ -16,7 +16,7 @@ public class swea_1215 {
                 }
             }
 
-            // N 길이의 회문 찾기 -> N이 짝수일 때, N이 홀수일 때
+            // N 길이의 가로 회문 찾기
             int cnt = 0;
             for (int i = 0; i < 8; i++) { //0~7
                 for (int j = 0; j < 8 - N + 1; j++) { //0~3
@@ -26,11 +26,36 @@ public class swea_1215 {
                     while (end > start) {
                         if (board[i][start] != board[i][end]) {
                             break;
+                        } else if (board[i][start] == board[i][end]) {
+                            start++;
+                            end--;
+                            num++;
                         }
-                        start++;
-                        end--;
-                        num++;
                     }
+
+                    if (num == (N / 2) || num == ((N - 1) / 2)) {
+                        cnt++;
+                    }
+
+                }
+            }
+
+            // N 길이의 가로 회문 찾기
+            for (int i = 0; i < 8; i++) { //0~7
+                for (int j = 0; j < 8 - N + 1; j++) { //0~3
+                    int start = j;
+                    int end = j + (N - 1);
+                    int num = 0;
+                    while (end > start) {
+                        if (board[start][i] != board[end][i]) {
+                            break;
+                        } else if (board[start][i] == board[end][i]) {
+                            start++;
+                            end--;
+                            num++;
+                        }
+                    }
+
                     if (num == (N / 2) || num == ((N - 1) / 2)) {
                         cnt++;
                     }
