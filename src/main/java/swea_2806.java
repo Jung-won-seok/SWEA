@@ -16,20 +16,20 @@ public class swea_2806 {
         }
     }
 
-    static void dfs(int depth) {
+    private static void dfs(int depth) {
         if (depth == N) {
             ans++;
             return;
         }
         for (int i = 0; i < N; i++) {
-            chess[depth] = i;
-            if (isPossible(depth)) {
+            chess[depth] = i; //chess[0] = 0
+            if (isPossible(depth)) { //depth == 0
                 dfs(depth + 1);
             }
         }
     }
 
-    static boolean isPossible(int depth) {
+    private static boolean isPossible(int depth) {
         for (int i = 0; i < depth; i++) {
             if (chess[i] == chess[depth] || depth - i == Math.abs(chess[depth] - chess[i])) {
                 return false;
