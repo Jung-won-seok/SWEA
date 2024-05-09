@@ -4,9 +4,10 @@ import java.util.Scanner;
 public class swea_1234 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        LinkedList<Integer> list = new LinkedList<>();
+
         int T = 10;
         for (int test_case = 1; test_case <= T; test_case++) {
+            LinkedList<Integer> list = new LinkedList<>();
             int N = sc.nextInt(); //  N=10
             //String으로 받아 int형 배열에 대입
             //배열의 값을 index[0]부터 Linkedlist에 대입
