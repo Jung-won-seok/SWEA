@@ -27,6 +27,7 @@ public class swea_5356 {
                     max = size[i];
                 }
             } //max = 6
+            //int max = Math.max(a.length, Math.max(b.length, Math.max(c.length, Math.max(d.length, e.length))));
 
             StringBuilder result = new StringBuilder();
             for(int j=0 ; j<max ; j++) {
